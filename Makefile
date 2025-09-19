@@ -1,11 +1,11 @@
 
-default: plugin coordinator optimizer tests 
+default: plugin coordinator optimizer  
 
 plugin: 
 	@make -C src/plugin/
 
 tests:
-	@echo "No Make rule for TESTS defined  yet.!.!"
+	@make -C tests/ 
 
 coordinator: 
 	@echo "No Make rule for COORDINATOR defined yet.!.!"
@@ -19,3 +19,6 @@ clean:
 	@make -C src/plugin/ clean
 #	@make -C src/coordinator/ clean
 #	@make -C src/optimizer/ clean
+
+.PHONY: tests
+
